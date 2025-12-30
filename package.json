@@ -1,0 +1,90 @@
+{
+  "name": "cc-snapshot-viewer",
+  "displayName": "CC Snapshot Viewer",
+  "description": "View file changes made by Claude Code at each prompt in the Source Control tab",
+  "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "subhashkhileri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subhashkhileri/cc-snapshot-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/subhashkhileri/cc-snapshot-viewer/issues"
+  },
+  "homepage": "https://github.com/subhashkhileri/cc-snapshot-viewer#readme",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "diff",
+    "snapshots",
+    "scm",
+    "source-control"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "SCM Providers",
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:.claude"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "claude-snapshots.refresh",
+        "title": "Refresh Snapshots",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "claude-snapshots.openDiff",
+        "title": "View Changes"
+      },
+      {
+        "command": "claude-snapshots.compareWithCurrent",
+        "title": "Compare with Current File"
+      }
+    ],
+    "menus": {
+      "scm/resourceState/context": [
+        {
+          "command": "claude-snapshots.compareWithCurrent",
+          "when": "scmProvider == claude-snapshots && scmResourceState == claudeSnapshotResource",
+          "group": "navigation"
+        }
+      ],
+      "scm/resourceGroup/context": [
+        {
+          "command": "claude-snapshots.refresh",
+          "when": "scmProvider == claude-snapshots",
+          "group": "inline"
+        }
+      ],
+      "scm/title": [
+        {
+          "command": "claude-snapshots.refresh",
+          "when": "scmProvider == claude-snapshots",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
