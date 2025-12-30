@@ -1,8 +1,8 @@
 {
   "name": "cc-snapshot-viewer",
   "displayName": "CC Snapshot Viewer",
-  "description": "View file changes made by Claude Code at each prompt in the Source Control tab",
-  "version": "0.1.1",
+  "description": "Track and review AI-generated code changes from Claude Code (Anthropic) - view diffs, snapshots, and file modifications at each prompt",
+  "version": "0.1.2",
   "icon": "images/icon.png",
   "license": "MIT",
   "publisher": "subhashkhileri",
@@ -17,17 +17,27 @@
   "keywords": [
     "claude",
     "claude-code",
+    "anthropic",
     "ai",
+    "ai-coding",
+    "ai-assistant",
     "diff",
+    "diff-viewer",
     "snapshots",
     "scm",
-    "source-control"
+    "source-control",
+    "code-review",
+    "file-changes",
+    "cursor",
+    "git",
+    "version-control"
   ],
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "SCM Providers",
+    "Visualization",
     "Other"
   ],
   "activationEvents": [
