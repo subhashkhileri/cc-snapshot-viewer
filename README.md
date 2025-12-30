@@ -12,6 +12,15 @@ A VS Code extension that displays file changes made by Claude Code at each promp
 
 ## Installation
 
+### From VS Code Marketplace (Recommended)
+
+1. Open VS Code or Cursor
+2. Go to Extensions (`Cmd+Shift+X` / `Ctrl+Shift+X`)
+3. Search for "CC Snapshot Viewer"
+4. Click Install
+
+Or install directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=subhashkhileri.cc-snapshot-viewer).
+
 ### From VSIX (Local)
 
 1. Download the `.vsix` file from [Releases](../../releases)
