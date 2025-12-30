@@ -1,4 +1,10 @@
+<div align="center">
+
 # CC Snapshot Viewer
+
+<img src="images/icon.png" alt="CC Snapshot Viewer Icon" width="128" />
+
+</div>
 
 A VS Code extension that displays file changes made by Claude Code at each prompt in the Source Control tab.
 

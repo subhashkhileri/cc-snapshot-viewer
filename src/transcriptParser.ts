@@ -32,7 +32,7 @@ export class TranscriptParser {
     }
 
     // Claude encodes paths by replacing / with -
-    // e.g., /Users/skhileri/Documents/tools becomes -Users-skhileri-Documents-tools
+    // e.g., /Users/UserName/Documents/tools becomes -Users-UserName-Documents-tools
     const encodedPath = workspacePath.replace(/\//g, '-');
     const projectDir = path.join(projectsDir, encodedPath);
 
