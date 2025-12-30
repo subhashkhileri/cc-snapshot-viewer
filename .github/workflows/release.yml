@@ -34,6 +34,11 @@ jobs:
         id: version
         run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
 
+      - name: Publish to VS Code Marketplace
+        run: npx @vscode/vsce publish
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -46,6 +51,9 @@ jobs:
 
             ### Installation
 
+            **From Marketplace:** Search for "CC Snapshot Viewer" in VS Code Extensions
+
+            **Manual Install:**
             1. Download the `.vsix` file below
             2. In VS Code, run `Extensions: Install from VSIX...` from the command palette
             3. Select the downloaded file

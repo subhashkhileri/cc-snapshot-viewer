@@ -2,7 +2,8 @@
   "name": "cc-snapshot-viewer",
   "displayName": "CC Snapshot Viewer",
   "description": "View file changes made by Claude Code at each prompt in the Source Control tab",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "icon": "images/icon.png",
   "license": "MIT",
   "publisher": "subhashkhileri",
   "repository": {
